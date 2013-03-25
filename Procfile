@@ -1,1 +1,1 @@
-web: zeus rails server
+web: bin/zeus server

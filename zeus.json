@@ -5,7 +5,9 @@
     "boot": {
       "default_bundle": {
         "development_environment": {
-          "prerake": {"rake": []},
+          "prerake": {
+              "rake": []
+          },
           "runner": ["r"],
           "console": ["c"],
           "server": ["s"],
@@ -14,8 +16,9 @@
           "dbconsole": []
         },
         "test_environment": {
-          "cucumber_environment": {"cucumber": []},
-          "test_helper": {"test": ["rspec", "testrb"]}
+          "test_helper": {
+              "test": ["t"]
+          }
         }
       }
     }
