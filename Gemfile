@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0.beta1'
@@ -9,7 +10,9 @@ platforms :ruby do
 end
 
 platforms :jruby do
+  #noinspection GemInspection
   gem 'jruby-openssl'
+  #noinspection GemInspection
   gem 'activerecord-jdbcpostgresql-adapter'
 end
 
@@ -26,18 +29,23 @@ gem 'haml-rails'
 
 gem 'puma'
 
+gem 'attribute_normalizer'
+
+gem 'mail'
+gem 'premailer'
 
 
 group :development do
   gem 'zeus', require: false
   gem 'guard', require: false
   gem 'guard-yard', require: false
-  gem 'pry-rails', require: false
+  gem 'pry-rails'
   gem 'pry-doc', require: false
 end
 
 group :test, :development do
-  gem "rspec-rails", "~> 2.0"
+  gem 'rspec-rails', '~> 2.0'
+  gem 'capybara'
   gem 'fabrication'
 end
 
