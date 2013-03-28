@@ -8,7 +8,8 @@ RtlongCom::Application.routes.draw do
   resource :home, only: [:index]
 
   # Omniauth callback
-  match '/auth/:provider/callback', to: 'sessions#create', via: :all
+  get '/auth/:provider/callback', to: 'sessions#create'
+  get '/auth/failure', to: 'sessions#failure'
 
   get '/login', to: redirect('/auth/github')
   get '/logout', to: 'sessions#destroy'

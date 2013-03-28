@@ -8,4 +8,8 @@
   %body
     - if admin?
       = render 'layouts/admin_toolbar'
+
+    - flash.each do |level,message|
+      .flash{class: level}= message
+
     = yield
