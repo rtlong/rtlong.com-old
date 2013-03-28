@@ -112,6 +112,7 @@ GEM
     multi_json (1.7.2)
     multipart-post (1.2.0)
     nokogiri (1.5.8)
+    nokogiri (1.5.8-java)
     oauth2 (0.8.1)
       faraday (~> 0.8)
       httpauth (~> 0.1)
@@ -132,6 +133,9 @@ GEM
     premailer (1.7.3)
       css_parser (>= 1.1.9)
       htmlentities (>= 4.0.0)
+    premailer-rails (1.3.2)
+      premailer (~> 1.7)
+      rails (>= 3)
     pry (0.9.12)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
@@ -242,10 +246,11 @@ DEPENDENCIES
   jbuilder (~> 1.0.1)
   jruby-openssl
   mail
+  nokogiri
   omniauth
   omniauth-github
   pg
-  premailer
+  premailer-rails
   pry-doc
   pry-rails
   puma
