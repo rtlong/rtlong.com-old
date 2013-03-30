@@ -34,8 +34,6 @@ GEM
     atomic (1.0.1)
     atomic (1.0.1-java)
     attribute_normalizer (1.1.0)
-    bcrypt-ruby (3.0.1)
-    bcrypt-ruby (3.0.1-java)
     bouncy-castle-java (1.5.0147)
     builder (3.1.4)
     capybara (2.0.2)
@@ -88,8 +86,6 @@ GEM
     htmlentities (4.3.1)
     httpauth (0.2.0)
     i18n (0.6.4)
-    jbuilder (1.0.2)
-      activesupport (>= 3.0.0)
     jdbc-postgres (9.2.1002.1)
     jquery-rails (2.2.1)
       railties (>= 3.0, < 5.0)
@@ -237,7 +233,6 @@ PLATFORMS
 DEPENDENCIES
   activerecord-jdbcpostgresql-adapter
   attribute_normalizer
-  bcrypt-ruby (~> 3.0.0)
   capybara
   coffee-rails (~> 4.0.0.beta1)
   fabrication
@@ -245,7 +240,6 @@ DEPENDENCIES
   guard
   guard-yard
   haml-rails
-  jbuilder (~> 1.0.1)
   jquery-rails
   jruby-openssl
   mail

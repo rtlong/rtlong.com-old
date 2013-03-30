@@ -7,7 +7,9 @@ RtlongCom::Application.routes.draw do
 
   resource :home, only: [:index]
 
-  resource :contact
+  resource :contact, controller: :contact, only: :show do
+    get :mail
+  end
 
   get :resume, to: redirect('https://www.dropbox.com/s/kz73q1id1c2cc54/Resume-Ryan_T_Long.pdf')
 

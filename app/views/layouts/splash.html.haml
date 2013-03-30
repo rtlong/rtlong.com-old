@@ -1,0 +1,13 @@
+- content_for :content do
+  = vertically_center do
+
+    .row
+      .large-4.large-centered.columns
+        .row
+          .columns.text-center
+            %svg.signature{viewBox:"0 0 1000 510", xmlns: "http://www.w3.org/2000/svg", 'xmlns:xlink'=>"http://www.w3.org/1999/xlink"}
+              = raw File.read(Rails.root.join('public/images/signature1_plain.svg'))
+
+        = yield
+
+= render template: 'layouts/application'

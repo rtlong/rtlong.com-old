@@ -16,8 +16,8 @@
 
 // We use these to control various global styles
 $body-bg: rgb(240,236,232);
-$body-font-color: rgb(73,73,73);
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-color: rgb(96,96,96);
+$body-font-family: "Lusitana",serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -38,7 +38,7 @@ $primary-color: $body-font-color;
 // $global-rounded: 1000px;
 
 // We use these to control inset shadow shiny edges and depressions.
-$shiny-edge-size: 0 0px 0;
+//$shiny-edge-size: 0 0px 0;
 // $shiny-edge-color: rgba(#fff, .5);
 // $shiny-edge-active-color: rgba(#000, .2);
 
@@ -131,7 +131,7 @@ $shiny-edge-size: 0 0px 0;
 // We use these to style anchors
 // $anchor-text-decoration: none;
 // $anchor-font-color: $primary-color;
-// $anchor-font-color-hover: darken($primary-color, 5%);
+$anchor-font-color-hover: darken($primary-color, 50%);
 
 // We use these to style the <hr> element
 // $hr-border-width: 1px;

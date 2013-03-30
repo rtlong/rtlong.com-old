@@ -1,4 +1,5 @@
 @import 'foundation_and_overrides'
+@import url('http://fonts.googleapis.com/css?family=Lusitana')
 
 body.vertical-center
   position: absolute
@@ -12,7 +13,21 @@ body.vertical-center
     display: table-cell
     vertical-align: middle
 
+body
+  //background-image: url('/images/xbackground.png.pagespeed.ic.MOHaUFS0Gn.webp')
 
-img.signature
+.signature
   width: 100%
-  max-width: 500px
+  max-width: 303px
+  height: 176px
+
+  path
+    fill: $primary-color !important
+    @include single-transition(fill)
+  &:hover
+    path
+      fill: inherit !important
+
+a:link
+  text-decoration: underline
+

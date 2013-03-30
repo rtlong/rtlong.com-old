@@ -1,0 +1,15 @@
+- content_for :title, 'Contact'
+
+.row
+  .columns.text-center
+    %p
+      %span.has-tip{'data-tooltip' => 1, title: "Don't copy and paste this; click for a mailto"}
+        = link_to 'Ꮢуаn@ᏒᎢᏞong܂com', mail_contact_path
+
+    %p (415) 912-8026
+
+.row
+  .large-6.columns.text-center
+    %p= link_to 'Github', github_path
+  .large-6.columns.text-center
+    %p= link_to 'Resume', resume_path

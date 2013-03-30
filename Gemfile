@@ -17,10 +17,10 @@ platforms :jruby do
 end
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.0.1'
+#gem 'jbuilder', '~> 1.0.1'
 
 # To use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '~> 3.0.0'
+#gem 'bcrypt-ruby', '~> 3.0.0'
 
 gem 'omniauth'
 gem 'omniauth-github'
