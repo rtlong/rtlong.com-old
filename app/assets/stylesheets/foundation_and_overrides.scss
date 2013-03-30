@@ -15,8 +15,8 @@
 // $em-base: 16px;
 
 // We use these to control various global styles
-$body-bg: #88ffff;
-// $body-font-color: #222;
+$body-bg: rgb(240,236,232);
+$body-font-color: rgb(73,73,73);
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
@@ -28,7 +28,7 @@ $body-bg: #88ffff;
 // $text-direction: ltr;
 
 // We use these as default colors throughout
-$primary-color: #000000;
+$primary-color: $body-font-color;
 // $secondary-color: #e9e9e9;
 // $alert-color: #c60f13;
 // $success-color: #5da423;
