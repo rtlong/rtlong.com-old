@@ -31,6 +31,8 @@ gem 'puma'
 
 gem 'attribute_normalizer'
 
+gem 'redcarpet'
+
 gem 'mail'
 gem 'premailer-rails'
 gem 'nokogiri' # dependency of premailer-rails
@@ -53,5 +55,7 @@ group :assets do
   gem 'sass-rails',   '~> 4.0.0.beta1'
   gem 'coffee-rails', '~> 4.0.0.beta1'
   gem 'uglifier', '>= 1.0.3'
-  gem 'angular-rails'
+  #gem 'angular-rails'
+  gem 'jquery-rails'
+  gem 'zurb-foundation', '~> 4.0.0'
 end

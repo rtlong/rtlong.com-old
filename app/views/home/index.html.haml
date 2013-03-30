@@ -1,1 +1,25 @@
-%h1 Home#index
+= vertically_center do
+
+  .row
+    .large-4.large-centered.columns
+      .row
+        .columns
+          %h1.text-center
+            = link_to root_path do
+              = image_tag 'signature1_plain.svg', alt: 'Ryan Long', class: 'signature'
+
+      -#.row
+      -#  .columns
+      -#    %img{src: 'https://gravatar.com/avatar/053e38be1bd8b18bf8b1c26e11a797ff?s=333'}
+
+      .row
+        .columns.text-center
+          :markdown
+            I'm a Ruby developer in San Francisco.
+
+      .row
+        .columns
+          %ul.button-group.even-3
+            %li= link_to 'Contact', contact_path, class: 'button small'
+            %li= link_to 'Github', github_path, class: 'button small'
+            %li= link_to 'Resume', resume_path, class: 'button small'

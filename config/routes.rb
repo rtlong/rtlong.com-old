@@ -7,6 +7,12 @@ RtlongCom::Application.routes.draw do
 
   resource :home, only: [:index]
 
+  resource :contact
+
+  get :resume, to: redirect('https://www.dropbox.com/s/kz73q1id1c2cc54/Resume-Ryan_T_Long.pdf')
+
+  get :github, to: redirect('https://github.com/rtlong')
+
   # Omniauth callback
   get '/auth/:provider/callback', to: 'sessions#create'
   get '/auth/failure', to: 'sessions#failure'
