@@ -1,1 +1,1 @@
-web: bin/zeus server
+web: puma
