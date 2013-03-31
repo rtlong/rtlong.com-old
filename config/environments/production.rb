@@ -21,7 +21,7 @@ RtlongCom::Application.configure do
 
   # Serve static assets to CloudFront
   config.serve_static_assets = true
-  config.static_cache_control = 'public, max-age=2592000' # Tell CloudFront to store assets for a month
+  config.static_cache_control = 'public, max-age=%i' % [1.month] # Tell CloudFront to store assets for a month
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor  = :uglifier
@@ -83,7 +83,7 @@ RtlongCom::Application.configure do
       :address              => 'smtp.gmail.com',
       :port                 => 587,
       :domain               => 'rtlong.com',
-      :user_name            => 'ryan',
+      :user_name            => ENV['GMAIL_USERNAME'],
       :password             => ENV['GMAIL_PASSWORD'],
       :authentication       => 'plain',
       :enable_starttls_auto => true
