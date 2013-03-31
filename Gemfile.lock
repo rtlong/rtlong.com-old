@@ -30,13 +30,13 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.33)
     addressable (2.3.3)
-    airbrake (3.1.9)
+    airbrake (3.1.8)
       activesupport
       builder
       json
     arel (4.0.0.beta2)
-    atomic (1.0.1)
-    atomic (1.0.1-java)
+    atomic (1.0.2)
+    atomic (1.0.2-java)
     attribute_normalizer (1.1.0)
     bouncy-castle-java (1.5.0147)
     builder (3.1.4)
@@ -237,7 +237,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord-jdbcpostgresql-adapter
-  airbrake
+  airbrake (= 3.1.8)
   attribute_normalizer
   capybara
   coffee-rails (~> 4.0.0.beta1)
