@@ -3,13 +3,11 @@ RtlongCom::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root to: 'home#index'
+  root to: 'home#show'
 
-  resource :home, only: [:index]
+  resource :home, only: [:index], controller: :home, only: :show
 
-  resource :contact, controller: :contact, only: :show do
-    get :mail
-  end
+  resource :contact, controller: :contact, only: :show
 
   get :resume, to: redirect('https://www.dropbox.com/s/kz73q1id1c2cc54/Resume-Ryan_T_Long.pdf')
 

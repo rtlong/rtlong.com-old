@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   layout 'splash'
-  def index
+  def show
   end
 end
