@@ -26,6 +26,8 @@ module RtlongCom
 
     config.assets.initialize_on_precompile = false
 
+    config.assets.paths << Rails.root.join('vendor/assets/fonts')
+
     config.generators do |g|
       g.template_engine :haml
       g.test_framework :rspec, fixture: true

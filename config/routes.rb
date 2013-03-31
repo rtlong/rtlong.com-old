@@ -5,13 +5,13 @@ RtlongCom::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root to: 'home#show'
 
-  resource :home, only: [:index], controller: :home, only: :show
-
-  resource :contact, controller: :contact, only: :show
+  resource :home, controller: :home, only: :show
 
   get :resume, to: redirect('https://www.dropbox.com/s/kz73q1id1c2cc54/Resume-Ryan_T_Long.pdf')
 
   get :github, to: redirect('https://github.com/rtlong')
+
+  get :vcard, to: redirect('/ryan_taylor_long.vcf')
 
   # Omniauth callback
   get '/auth/:provider/callback', to: 'sessions#create'
@@ -19,6 +19,7 @@ RtlongCom::Application.routes.draw do
 
   get '/login', to: redirect('/auth/github')
   get '/logout', to: 'sessions#destroy'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -5,8 +5,35 @@
 
 .row
   .large-4.columns.text-center
-    %p= link_to 'Contact', contact_path
-  .large-4.columns.text-center
     %p= link_to 'Github', github_path
+
   .large-4.columns.text-center
     %p= link_to 'Resume', resume_path
+
+  .large-4.columns.text-center
+    %p= link_to 'Contact', '#', data: {'reveal-id' => 'contact-info'}
+
+  %ul#contact-info.reveal-modal.vcard
+    .right
+      = link_to vcard_path, title: "Download my vCard" do
+        %i.foundicon-address-book
+    %li.fn.n
+      %span.given-name Ryan
+      %span.additional-name Taylor
+      %span.family-name Long
+    %li
+      = mail_to 'ryan@rtlong.com', nil, class: 'email'
+    %li
+      %abbr.tel(title='+1.415.912.8026')
+        (415) 912.8026
+      %a.tel-link(href="tel:14159128026") call
+    %li.adr
+      %span.locality San Francisco
+      ,
+      %span.region
+        %abbr(title="California") CA
+
+      %span.postal-code 94107
+      %span.hide.country-name
+        %abbr(title="United States") USA
+

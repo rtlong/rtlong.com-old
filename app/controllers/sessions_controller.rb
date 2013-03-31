@@ -5,8 +5,11 @@ class SessionsController < ApplicationController
   def create
     if Rails.configuration.allowed_users.any? { |provider, uid| provider.to_s.match(auth_hash.provider) and uid.match(auth_hash.uid) }
       session[:user] = auth_hash.uid
+      redirect_to :root, notice: 'Authenticated successfully.'
+      AdminMailer.new_login(request).deliver
+    else
+      redirect_to :root
     end
-    redirect_to :root, notice: 'Authenticated successfully.'
   end
 
   def destroy

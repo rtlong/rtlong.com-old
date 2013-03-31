@@ -19,15 +19,16 @@ RtlongCom::Application.configure do
   # For large-scale production use, consider using a caching reverse proxy like nginx, varnish or squid.
   # config.action_dispatch.rack_cache = true
 
-  # Disable Rails's static asset server (Apache or nginx will already do this).
+  # Serve static assets to CloudFront
   config.serve_static_assets = true
+  config.static_cache_control = 'public, max-age=2592000' # Tell CloudFront to store assets for a month
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor  = :uglifier
   # config.assets.css_compressor = :sass
 
-  # Whether to fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+  # Whether to fallback to assets pipeline if a precompiled asset is missed. CloudFront makes this safe
+  config.assets.compile = true
 
   # Generate digests for assets URLs.
   config.assets.digest = true
@@ -37,7 +38,7 @@ RtlongCom::Application.configure do
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
-  # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
+  config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
@@ -55,7 +56,7 @@ RtlongCom::Application.configure do
   # config.cache_store = :mem_cache_store
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  # config.action_controller.asset_host = "http://assets.example.com"
+  config.action_controller.asset_host = "http://assets.rtlong.com"
 
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
