@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
   end
 
   def failure
-    redirect_to :root, error: params[:message]
+    redirect_to :root, alert: params[:message]
   end
 
   protected

@@ -8,6 +8,7 @@
 %head
   %meta{charset: 'utf-8'}
 
+  = airbrake_javascript_notifier
   -# Set the viewport width to device width for mobile
   %meta(name='viewport' content='width=device-width, initial-scale=1.0')
   %meta(name="format-detection" content="telephone=no")
@@ -28,6 +29,5 @@
   = content_for?(:content) ? yield(:content) : yield
 
   = javascript_include_tag 'application'
-
 
 </html>

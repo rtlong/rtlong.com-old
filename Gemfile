@@ -37,6 +37,7 @@ gem 'mail'
 gem 'premailer-rails'
 gem 'nokogiri' # dependency of premailer-rails
 
+gem 'airbrake'
 
 group :development do
   gem 'zeus', require: false
