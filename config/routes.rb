@@ -14,7 +14,7 @@ RtlongCom::Application.routes.draw do
   get :vcard, to: redirect('/ryan_taylor_long.vcf')
 
   # Omniauth callback
-  get '/auth/:provider/callback', to: 'sessions#create'
+  match '/auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
   get '/auth/failure', to: 'sessions#failure'
 
   get '/login', to: redirect('/auth/github')

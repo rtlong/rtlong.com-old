@@ -2,20 +2,19 @@
 @import 'general_foundicons'
 @import url('http://fonts.googleapis.com/css?family=Lusitana:400,700')
 
-body.vertical-center
-  position: absolute
+html, body, .content.vertical-center
   margin: 0
   padding: 0
   height: 100%
   width:  100%
+
+.content.vertical-center
   display: table
 
   & > .vertical-center
     display: table-cell
     vertical-align: middle
 
-body
-  //background-image: url('/images/xbackground.png.pagespeed.ic.MOHaUFS0Gn.webp')
 
 .signature
   width: 100%
@@ -23,26 +22,18 @@ body
   height: 176px
 
   path
-    fill: $primary-color !important
+    fill: $body-font-color !important
     @include single-transition(fill)
   &:hover
     path
       fill: inherit !important
 
 a:link
-  text-decoration: underline
+  //text-decoration: underline
 
 a.tel-link
   font-style: oblique
 
 ul.vcard
   abbr
-    border-bottom: none
-
-.top-bar
-  position: fixed
-  top: 0
-  left: 0
-  width: auto
-  right: 0
-
+    //border-bottom: none

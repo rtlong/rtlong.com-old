@@ -15,8 +15,8 @@
 // $em-base: 16px;
 
 // We use these to control various global styles
-$body-bg: rgb(240,236,232);
-$body-font-color: rgb(96,96,96);
+$body-bg: #F2F1DF;
+$body-font-color: #73624D;
 $body-font-family: "Lusitana",serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
@@ -28,17 +28,17 @@ $body-font-family: "Lusitana",serif;
 // $text-direction: ltr;
 
 // We use these as default colors throughout
-$primary-color: $body-font-color;
-// $secondary-color: #e9e9e9;
-// $alert-color: #c60f13;
-// $success-color: #5da423;
+$primary-color: #808c56;
+$secondary-color: #BFB7A8;
+$alert-color: #6E2118;
+$success-color: #31B0C2;
 
 // We use these to make sure border radius matches unless we want it different.
 // $global-radius: 3px;
 // $global-rounded: 1000px;
 
 // We use these to control inset shadow shiny edges and depressions.
-//$shiny-edge-size: 0 0px 0;
+// $shiny-edge-size: 0 0px 0;
 // $shiny-edge-color: rgba(#fff, .5);
 // $shiny-edge-active-color: rgba(#000, .2);
 
@@ -131,7 +131,7 @@ $primary-color: $body-font-color;
 // We use these to style anchors
 // $anchor-text-decoration: none;
 // $anchor-font-color: $primary-color;
-$anchor-font-color-hover: darken($primary-color, 50%);
+$anchor-font-color-hover: darken($primary-color, 20%);
 
 // We use these to style the <hr> element
 // $hr-border-width: 1px;
@@ -352,7 +352,7 @@ $anchor-font-color-hover: darken($primary-color, 50%);
 // We use these to control text style.
 // $alert-font-weight: bold;
 // $alert-font-size: emCalc(14px);
-// $alert-font-color: #fff;
+$alert-font-color: $body-font-color;
 // $alert-font-color-alt: darken($secondary-color, 60%);
 
 // We use this for close hover effect.
@@ -365,12 +365,12 @@ $anchor-font-color-hover: darken($primary-color, 50%);
 // $alert-bottom-margin: emCalc(20px);
 
 // We use these to style the close buttons
-// $alert-close-color: #333;
+$alert-close-color: $body-bg;
 // $alert-close-position: emCalc(5px);
 // $alert-close-font-size: emCalc(22px);
-// $alert-close-opacity: 0.3;
-// $alert-close-opacity-hover: 0.5;
-// $alert-close-padding: 5px 4px 4px;
+$alert-close-opacity: 0.5;
+$alert-close-opacity-hover: 1;
+// $alert-close-padding: 9px 9px 0 0;
 
 // We use this to control border radius
 // $alert-radius: $global-radius;
@@ -770,8 +770,8 @@ $anchor-font-color-hover: darken($primary-color, 50%);
 // $reveal-overlay-bg-old: #000;
 
 // We use these to control the style of the modal itself.
-// $reveal-modal-bg: #fff;
-// $reveal-position-top: 50px;
+$reveal-modal-bg: $body-bg;
+$reveal-position-top: 50px;
 // $reveal-default-width: 80%;
 // $reveal-modal-padding: emCalc(20px);
 // $reveal-box-shadow: 0 0 10px rgba(#000,.4);
@@ -786,7 +786,7 @@ $anchor-font-color-hover: darken($primary-color, 50%);
 // We use these to control the modal border
 // $reveal-border-style: solid;
 // $reveal-border-width: 1px;
-// $reveal-border-color: #666;
+$reveal-border-color: $primary-color;
 
 //
 // Section Variables
@@ -968,11 +968,11 @@ $anchor-font-color-hover: darken($primary-color, 50%);
 //
 
 // Background color for the top bar
-// $topbar-bg: #111;
+$topbar-bg: $body-font-color;
 
 // Height and margin
 // $topbar-height: 45px;
-// $topbar-margin-bottom: emCalc(30px);
+$topbar-margin-bottom: emCalc(15px);
 
 // Control Input height for top bar
 // $topbar-input-height: 2.45em;
@@ -982,7 +982,7 @@ $anchor-font-color-hover: darken($primary-color, 50%);
 // $topbar-title-font-size: emCalc(17px);
 
 // Set the link colors and styles for top-level nav
-// $topbar-link-color: #fff;
+$topbar-link-color: $body-bg;
 // $topbar-link-weight: bold;
 // $topbar-link-font-size: emCalc(13px);
 
@@ -1005,7 +1005,7 @@ $anchor-font-color-hover: darken($primary-color, 50%);
 
 // Transitions and breakpoint styles
 // $topbar-transition-speed: 300ms;
-// $topbar-breakpoint: emCalc(940px); // Change to 9999px for always mobile layout
+$topbar-breakpoint: emCalc(300px); // Change to 9999px for always mobile layout
 // $topbar-media-query: "only screen and (min-width "#{$topbar-breakpoint}")";
 
 
