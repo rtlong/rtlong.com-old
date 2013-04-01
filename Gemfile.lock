@@ -113,6 +113,7 @@ GEM
     minitest (4.7.0)
     multi_json (1.7.2)
     multipart-post (1.2.0)
+    newrelic_rpm (3.5.8.72)
     nokogiri (1.5.9)
     nokogiri (1.5.9-java)
     oauth2 (0.8.1)
@@ -252,6 +253,7 @@ DEPENDENCIES
   jquery-rails
   jruby-openssl
   mail
+  newrelic_rpm
   nokogiri
   omniauth
   omniauth-github

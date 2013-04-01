@@ -41,6 +41,8 @@ gem 'airbrake', '3.1.8'
 
 gem 'rack-policy'
 
+gem 'newrelic_rpm'
+
 group :development do
   gem 'zeus', require: false
   gem 'guard', require: false
