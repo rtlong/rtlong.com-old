@@ -17,7 +17,7 @@ RtlongCom::Application.routes.draw do
   match '/auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
   get '/auth/failure', to: 'sessions#failure'
 
-  get '/login', to: redirect('/auth/github')
+  get '/login', to: 'sessions#new'
   get '/logout', to: 'sessions#destroy'
 
 

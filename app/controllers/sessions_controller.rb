@@ -2,6 +2,16 @@ class SessionsController < ApplicationController
 
   protect_from_forgery except: :create
 
+  def new
+    # This cookie needs to be present for rack-policy to let any of them through
+    response.set_cookie 'rack.policy', {
+        value: 'true',
+        path: '/',
+        expires: 1.year.from_now.utc
+    }
+    redirect_to '/auth/github'
+  end
+
   def create
     if Rails.configuration.allowed_users.any? { |provider, uid| provider.to_s.match(auth_hash.provider) and uid.match(auth_hash.uid) }
       session[:user] = auth_hash.uid

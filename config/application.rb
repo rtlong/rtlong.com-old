@@ -24,6 +24,8 @@ module RtlongCom
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    config.middleware.insert_before ActionDispatch::Cookies, Rack::Policy::CookieLimiter, consent_token: 'rack.policy'
+
     config.assets.initialize_on_precompile = false
 
     config.assets.paths << Rails.root.join('vendor/assets/fonts')
@@ -38,5 +40,8 @@ module RtlongCom
         github: ENV['omniauth_github_uid'],
         developer: /.+/
     }
+
+    config.google_analytics_id = ENV['google_analytics_id'].to_s.strip.match(/\A\w+(?:-\w+)+\z/).try(:to_s)
+
   end
 end

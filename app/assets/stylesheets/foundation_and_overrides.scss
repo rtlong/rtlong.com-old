@@ -352,7 +352,7 @@ $anchor-font-color-hover: darken($primary-color, 20%);
 // We use these to control text style.
 // $alert-font-weight: bold;
 // $alert-font-size: emCalc(14px);
-$alert-font-color: $body-font-color;
+$alert-font-color: $body-bg;
 // $alert-font-color-alt: darken($secondary-color, 60%);
 
 // We use this for close hover effect.
