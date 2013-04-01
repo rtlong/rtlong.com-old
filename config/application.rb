@@ -30,6 +30,10 @@ module RtlongCom
 
     config.assets.paths << Rails.root.join('vendor/assets/fonts')
 
+    # Precompile additional assets.
+    # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
+    config.assets.precompile += %w( custom.modernizr.js )
+
     config.generators do |g|
       g.template_engine :haml
       g.test_framework :rspec, fixture: true
