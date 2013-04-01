@@ -44,4 +44,7 @@ module ApplicationHelper
     @meta[name.to_s] = content.presence
   end
 
+  def icon(name)
+    content_tag(:span, '', class: [name, :icon])
+  end
 end

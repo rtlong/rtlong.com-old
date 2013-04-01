@@ -7,7 +7,9 @@
 
 .row
   .large-4.columns.text-center
-    %p= link_to 'GitHub', github_path
+    %p
+      = link_to github_path do
+        GitHub
 
   .large-4.columns.text-center
     %p= link_to 'Résumé', resume_path
@@ -17,26 +19,37 @@
       %a(href='#' data-reveal-id='contact-info') Contact
 
 %ul#contact-info.reveal-modal.tiny.vcard
+  .hcard-note
+    %a.openwebicons-microformats(title="Microformats-enabled: This is an hCard" href="http://microformats.org/about")
+      %span hCard
+
   %li.fn.n
     %span.given-name Ryan
     %span.additional-name Taylor
     %span.family-name Long
   %li
-    = mail_to 'ryan@rtlong.com', nil, class: 'email'
+    = link_to 'mailto:ryan@rtlong.com', class: 'email' do
+      = icon 'zocial-email'
+      ryan@rtlong.com
+
   %li
-    %abbr.tel(title='+1.415.912.8026')
-      (415) 912-8026
-    %a.tel-link(href="tel:14159128026") call
+    %a.tel-link(href="tel:14159128026")
+      = icon 'zocial-call'
+      %abbr.tel(title='+1.415.912.8026')
+        (415) 912-8026
   %li.adr
-    %span.locality<> San Francisco
-    ,
-    %span.region
-      %abbr(title="California") CA
+    = icon 'entypo-location'
+    = succeed(',') do
+      %span.locality San Francisco
+    %abbr.region(title="California") CA
     %span.postal-code 94107
     .hide.country-name United States of America
+  %a.hide.photo(href="https://gravatar.com/avatar/053e38be1bd8b18bf8b1c26e11a797ff?s=256") Avatar
 
-  = link_to vcard_path, title: "Download my vCard" do
-    %i.foundicon-address-book
-    vCard
+  %li
+    = link_to vcard_path, title: "Download my vCard" do
+      = icon 'entypo-vcard'
+      vCard
+
 
   %a.close-reveal-modal(href='#') &#215;

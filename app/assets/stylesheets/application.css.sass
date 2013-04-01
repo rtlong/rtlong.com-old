@@ -1,6 +1,4 @@
 @import 'foundation_and_overrides'
-@import 'icons'
-@import 'fonts'
 
 html, body, .content.vertical-center
   margin: 0
@@ -24,16 +22,46 @@ html, body, .content.vertical-center
   path
     fill: $body-font-color !important
     @include single-transition(fill)
-  &:hover
-    path
-      fill: inherit !important
+  //&:hover
+  //  path
+  //    fill: $alert-color !important
 
 a:link
-  //text-decoration: underline
+//text-decoration: underline
 
 a.tel-link
   font-style: oblique
 
 ul.vcard
   abbr
-    //border-bottom: none
+    font-size: inherit
+
+  .icon:before
+    width: 1.5em
+    display: inline-block
+    text-align: center
+    margin-right: 0.3em
+
+
+.gc-cs-link
+  color: $primary-color !important
+  text-decoration: none !important
+
+.hcard-note
+  position: absolute
+  right: 0.5em
+  bottom: 0.5em
+  opacity: 0.5
+  z-index: -999
+  & > a
+    font-size: 1em
+    color: $primary-color
+    line-height: 1
+    & > span
+      display: none
+  &:hover > a > span
+    display: inline
+
+
+@import 'icons'
+@import 'fonts'
