@@ -9,12 +9,12 @@ platforms :ruby do
   gem 'foreman', groups: [:development]
 end
 
-platforms :jruby do
-  #noinspection GemInspection
-  gem 'jruby-openssl'
-  #noinspection GemInspection
-  gem 'activerecord-jdbcpostgresql-adapter'
-end
+#platforms :jruby do
+#  #noinspection GemInspection
+#  gem 'jruby-openssl'
+#  #noinspection GemInspection
+#  gem 'activerecord-jdbcpostgresql-adapter'
+#end
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 #gem 'jbuilder', '~> 1.0.1'
@@ -42,6 +42,8 @@ gem 'airbrake', '3.1.8'
 gem 'rack-policy'
 
 gem 'newrelic_rpm'
+
+gem 'rack-canonical-host'
 
 group :development do
   gem 'zeus', require: false
