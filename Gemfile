@@ -27,7 +27,7 @@ gem 'omniauth-github'
 
 gem 'haml-rails'
 
-gem 'puma'
+gem 'unicorn'
 
 gem 'attribute_normalizer'
 

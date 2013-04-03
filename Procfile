@@ -1,1 +1,1 @@
-web: puma -p $PORT -e $RACK_ENV
+web: bin/unicorn -p $PORT -E $RACK_ENV --config-file=./config/unicorn.config.rb
