@@ -16,3 +16,4 @@
 /tmp
 
 /.rbenv-vars
+config/database.yml
