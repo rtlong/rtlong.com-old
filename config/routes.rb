@@ -7,7 +7,7 @@ RtlongCom::Application.routes.draw do
 
   resource :home, controller: :home, only: :show
 
-  get :resume, to: redirect('https://www.dropbox.com/s/kz73q1id1c2cc54/Resume-Ryan_T_Long.pdf')
+  get :resume, to: redirect('https://www.dropbox.com/s/x5t88d6cdycp3ty/Resume-Ryan_T_Long.pdf')
 
   get :github, to: redirect('https://github.com/rtlong')
 
