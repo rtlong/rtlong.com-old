@@ -10,8 +10,6 @@ gem 'haml-rails'
 
 gem 'unicorn'
 
-gem 'attribute_normalizer'
-
 gem 'redcarpet'
 
 gem 'mail'
