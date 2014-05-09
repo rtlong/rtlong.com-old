@@ -1,26 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.1.1'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0.beta1'
-
-platforms :ruby do
-  gem 'pg'
-  gem 'foreman', groups: [:development]
-end
-
-#platforms :jruby do
-#  #noinspection GemInspection
-#  gem 'jruby-openssl'
-#  #noinspection GemInspection
-#  gem 'activerecord-jdbcpostgresql-adapter'
-#end
-
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-#gem 'jbuilder', '~> 1.0.1'
-
-# To use ActiveModel has_secure_password
-#gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'rails'
 
 gem 'omniauth'
 gem 'omniauth-github'
@@ -51,6 +32,7 @@ group :development do
   gem 'guard-yard', require: false
   gem 'pry-rails'
   gem 'pry-doc', require: false
+  gem 'foreman', require: false
 end
 
 group :test, :development do
@@ -63,7 +45,6 @@ group :assets do
   gem 'sass-rails',   '~> 4.0.0.beta1'
   gem 'coffee-rails', '~> 4.0.0.beta1'
   gem 'uglifier', '>= 1.0.3'
-  #gem 'angular-rails'
   gem 'jquery-rails'
   gem 'zurb-foundation', '~> 4.0.0'
 end
