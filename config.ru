@@ -7,7 +7,7 @@ require ::File.expand_path('../config/environment',  __FILE__)
 use Rack::CanonicalHost, nil, if: /\Awww\.|\.herokuapp\.com\z/ do
   case Rails.env.to_sym
   when :stage then 'stage.rtlong.com'
-  when :production then 'rtlong.com'
+  when :production then 'www.rtlong.com'
   end
 end
 
